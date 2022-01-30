@@ -204,8 +204,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="rが使えるパソコン" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Rが使えるパソコン</h2>
 <p>Rはオープン・ソースで開発されており，Windows，Mac，Linuxのいずれでも利用可能。Rそのものは性能の低いマシンでも十分に動作する(ただし，分析するデータの規模や用いる分析手法によってはある程度高性能なパソコンが必要になるかもしれない)。また，RStudioはRを便利に使うために必須と言えるソフトウェア。</p>
-<p>これからパソコンを用意するという人には，Mac &gt; Linux &gt; Windowsの順でおすすめする。初心者がRを使っていてトラブルが少ないのはMac。Linuxも安定しているが，そもそも一般の人には馴染みがないので，R以外の用途を考えると選択肢からは外れそう。Windowsは積極的におすすめしないが，いま使っているPCがWindowsであれば，買い換えるほどのものでもない。</p>
-<p>Windowsの場合には，WSLという仮想環境のLinuxにRをインストールして使うことも可能。わたしは，WSLにRとRStudio Serverをインストールして，ChromeなどのブラウザでRStudioを使っている(快適な環境)。</p>
+<p>これからパソコンを用意するという人には，Mac &gt; Linux &gt; Windowsの順でおすすめする。(わたしが)Rを使っていてトラブルが少ないのはMac。Linuxでも安定しているが，そもそも一般の人にLinuxは馴染みがないので，R以外の用途を考えると選択肢からは外れそう。Windowsは最初に少し設定が必要なのと，フォルダやファイル名に注意して利用する必要がある。といっても，いま使っているPCがWindowsであれば，買い換えるほどのものでもない。</p>
+<p>Windowsの場合には，WSLという仮想環境のLinuxにRをインストールして使うことも可能。わたしは，WSLにRとRStudio Serverをインストールして，ChromeなどのブラウザでRStudioを使っている(けっこう快適)。</p>
 </div>
 <div id="インストール方法" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> インストール方法</h2>
@@ -246,7 +246,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Environmentなどのペイン：デフォルトでは右上。Environmentタブには記憶されている変数やデータなどが表示される。Historyタブには実行したコマンドの履歴が表示され，選択して再度実行できる。</li>
 <li>Filesなどのペイン：デフォルトでは右下。Filesタブには現在のディレクトリにあるファイルのリストが表示される。ファイル名をクリックすればファイルを開くことができる。RのソースコードなどやデータフレームはSourceペインで開かれる。Plotsタブはグラフが表示される場所。</li>
 </ul>
-<p>Rで単発のコマンドを実行するときには，Conoleタブで行う。ただし，通常はスクリプト・ファイルにコマンドを書いて一つずつ実行していったり，いくつかのコマンドをまとめて実行したりすることが多い。Consoleでコマンドを実行した場合にも，Histroyタブからスクリプト・ファイルへと実行したコマンドを貼り付けておくと良い。そうすれば，いつでも作業を最初から再現できる。研究では，結果を再現できることが極めて重要。再現性を担保できることは，ExcelではなくRを使うメリットの一つ。</p>
+<p>Rで単発のコマンドを実行するときには，Consoleタブで行う。ただし，通常はスクリプト・ファイルにコマンドを書いて一つずつ実行していったり，いくつかのコマンドをまとめて実行したりすることが多い。Consoleでコマンドを実行した場合にも，Histroyタブからスクリプト・ファイルへと実行したコマンドを貼り付けておくと良い。そうすれば，いつでも作業を最初から再現できる。研究では，結果を再現できることが極めて重要。再現性を担保できることは，ExcelではなくRを使うメリットの一つ。</p>
+<p>スクリプト・ファイルに書かれたコマンドを実行する場合，Ctrlを押しながらEnterを押す。範囲が選択されていない場合には，カーソルのある行(コマンドが複数行にまたがっていてもOk)が実行される。範囲を選択してCtrl+Enterを押せば，選択された範囲のコードが順に実行される。</p>
 </div>
 <div id="ヘルプの参照" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> ヘルプの参照</h2>
@@ -256,11 +257,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="チュートリアルの実行" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> チュートリアルの実行</h2>
-<p>右上のペインにTutorialというタブがあり，そこからRのチュートリアル・レッスンを受けられる。チュートリアルを実行するためのパッケージをインストールするのに時間がかかるが，とりあえず一通り実行してみると，Rの使い方についてのイメージを持つことができる。</p>
+<p>右上のペインにTutorialというタブがあり，そこからRのチュートリアル・レッスンを受けられる。チュートリアルを実行するためのパッケージをインストールするのに時間がかかるが，とりあえず一通り実行してみると，Rの使い方についてのイメージを持つことができるはず。</p>
 </div>
 <div id="パッケージのインストール" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> パッケージのインストール</h2>
-<p>Rは本体にさまざまなパッケージを追加することで，機能を拡張することができる。パッケージをインストールするには，install.packages関数を用いる。とくに，tidyverseというパッケージは必ず利用することになるので，インストールしておこう。</p>
+<p>Rは本体にパッケージを追加することで，機能を拡張することができる。パッケージをインストールするには，install.packages関数を用いる。とくに，tidyverseパッケージは必ず利用することになるので，インストールしておこう。</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rとrstudioのインストール.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span></code></pre></div>
 <p>パッケージはインストールするだけでは使えないので，毎回読み込む必要がある。パッケージを読み込むにはlibrary関数を使う。</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rとrstudioのインストール.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>

@@ -234,7 +234,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>nameというオブジェクトには”大阪　太郎”という文字列，genderというオブジェクトには”男”という文字列，ageというオブジェクトには”20”という文字列が代入れていることがわかる。</p>
 <p>ここで，ageに代入されている”20”は，20という数値ではなく，文字列として扱われていることに注意しよう。そのため，ageを数値として計算に用いることはできず，下のようなエラーとなる。</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="rにおけるオブジェクト.html#cb15-1" aria-hidden="true" tabindex="-1"></a>age<span class="sc">+</span><span class="dv">10</span></span></code></pre></div>
-<pre><code>## Error in age + 10:  二項演算子の引数が数値ではありません</code></pre>
+<pre><code>## Error in age + 10: non-numeric argument to binary operator</code></pre>
 <p>オブジェクトは代入されるものによっていくつかの型(Type)に分類される。ここでは，a，bは数値型(numeric)，name，gender，ageは文字列型(character)となる。</p>
 <p>EnvironmentタブをList表示からGrid表示に切り替えれば，オブジェクトの型が表示される。</p>
 <div class="figure">
@@ -308,7 +308,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb35-12"><a href="rにおけるオブジェクト.html#cb35-12" aria-hidden="true" tabindex="-1"></a>category4</span></code></pre></div>
 <pre><code>##  [1] 大人・男   子ども・女 大人・女   子ども・女 大人・男   大人・女  
 ##  [7] 子ども・男 子ども・女 大人・男   子ども・女
-## Levels: 子ども・女 子ども・男 大人・女 大人・男</code></pre>
+## Levels: 大人・女 大人・男 子ども・女 子ども・男</code></pre>
 <p>目的は，category4の要素が「大人・女」か「大人・男」であれば「大人」に，「子ども・女」か「子ども・男」であれば「子ども」に分類し直すことである。</p>
 <p>category4を数値型に変換したものが1か2であれば「大人」，3か4であれば「子ども」なので，大人か子どもかの2分類を表すcategory2というオブジェクトを下のように作成することができる。</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="rにおけるオブジェクト.html#cb37-1" aria-hidden="true" tabindex="-1"></a>cat2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;大人&quot;</span>,<span class="st">&quot;大人&quot;</span>,<span class="st">&quot;子ども&quot;</span>,<span class="st">&quot;子ども&quot;</span>)</span>
@@ -317,8 +317,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb37-4"><a href="rにおけるオブジェクト.html#cb37-4" aria-hidden="true" tabindex="-1"></a>category2 <span class="ot">&lt;-</span> cat2[category4_num]</span>
 <span id="cb37-5"><a href="rにおけるオブジェクト.html#cb37-5" aria-hidden="true" tabindex="-1"></a>category2 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(category2)</span>
 <span id="cb37-6"><a href="rにおけるオブジェクト.html#cb37-6" aria-hidden="true" tabindex="-1"></a>category2</span></code></pre></div>
-<pre><code>##  [1] 子ども 大人   子ども 大人   子ども 子ども 大人   大人   子ども 大人  
-## Levels: 子ども 大人</code></pre>
+<pre><code>##  [1] 大人   子ども 大人   子ども 大人   大人   子ども 子ども 大人   子ども
+## Levels: 大人 子ども</code></pre>
 </div>
 </div>
 <div id="データフレーム" class="section level2" number="3.4">
